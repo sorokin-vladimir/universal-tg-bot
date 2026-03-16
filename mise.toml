@@ -1,0 +1,21 @@
+[tools]
+go = "latest"
+
+[env]
+_.file = ".env"
+
+[tasks.run]
+description = "Run the bot"
+run = "go run ./cmd/bot"
+
+[tasks.build]
+description = "Build the bot binary"
+run = "go build -o bin/bot ./cmd/bot"
+
+[tasks.lint]
+description = "Run linter"
+run = "golangci-lint run ./..."
+
+[tasks.tidy]
+description = "Tidy go modules"
+run = "go mod tidy"

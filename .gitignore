@@ -1,0 +1,12 @@
+# env
+.env
+
+# binary
+bin/
+
+# Go
+*.test
+*.out
+
+# OS
+.DS_Store
