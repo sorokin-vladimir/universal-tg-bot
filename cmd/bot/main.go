@@ -64,6 +64,8 @@ func main() {
 		log.Fatalf("schedule digest: %v", err)
 	}
 
+	go tg.Listen()
+
 	sched.Start()
 	log.Printf("bot started, digest scheduled: %s", cfg.Digest.Cron)
 
